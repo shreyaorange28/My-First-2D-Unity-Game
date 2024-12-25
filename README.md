@@ -16,7 +16,5 @@
 ![image](https://github.com/user-attachments/assets/dd72acf2-1a13-4446-bf0f-a44e5d382bf2)
 <video src="https://github.com/user-attachments/assets/c4603f09-b601-465f-b9c4-108514ac7119">
 
-
 ### Next Steps
-
 Next, I hope to add more interactable platforms (as the current ones have a lot of friction and are a bit glitchy) and a way to collect fruits as the player. I also want to add levels (probably basic ones just to keep learning how to use Unity). After that I want to focus on how to add more functionality to the sprite (ex. double jumps, wall jumps, etc.) or even learn how to add a second player.
