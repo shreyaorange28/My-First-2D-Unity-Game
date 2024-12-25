@@ -14,8 +14,7 @@
   4. At this point, I wanted to make the sprite swap to the running or jumping animations while moving using the Animation tab so I moved on to the [Idle, Run and Jump Animations - Platformer Unity 2D tutorial ](https://www.youtube.com/watch?v=Sg_w8hIbp4Y) In following this tutorial, I not only learned how to simplify my code from the previous tutorials by getting the components instead of inputting them as variables in Unity, but I also learned how to use the Animation tab to swap between animation depending on the player's movement using Blend Trees. I ran into some issues with detecting the ground when jumping but I found that it was due to some of the remnant Capsule Colliders of the first tutorial as well as an unchecked IsTrigger box on the correct capsule collider but a quick rewatch of the part of the video where she set up the colliders allowed me to figure it out quickly.
 5. This is also the point where I decided to learn how to upload Unity projects to github. After running into some issues where the project was too big, [this tutorial](https://www.youtube.com/watch?v=qpXxcvS-g3g) taught me to remove the slashes at the beginning of the files in the git ignore and that allowed me to push my unity project to github. Here are some progress pics of my project and a video of me moving around.
 ![image](https://github.com/user-attachments/assets/dd72acf2-1a13-4446-bf0f-a44e5d382bf2)
-<video src="https://github.com/user-attachments/assets/c4603f09-b601-465f-b9c4-108514ac7119"></video>
-
+<video src="https://github.com/user-attachments/assets/fb0f419c-f056-45e3-a842-f41f0cd29ba3"></video>
 
 
 ### Next Steps
