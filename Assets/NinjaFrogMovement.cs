@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,7 +9,10 @@ public class PlayerMovement : MonoBehaviour
     bool isFacingRight = true;
     float jumpPower = 5f;
     bool isGrounded = false;
+    Vector2 startPos;
+    SpriteRenderer spriteRenderer;
 
+    public FruitManager fm;
     Rigidbody2D rb;
     Animator animator;
 
@@ -17,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        startPos = transform.position;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -54,7 +60,40 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isGrounded = true;
-        animator.SetBool("isJumping", !isGrounded);
+        if (collision.CompareTag("obstacle"))
+        {
+            Die();
+        } if (collision.CompareTag("fruit"))
+        {
+            Destroy(collision.gameObject);
+            fm.fruitCount++;
+        }
+        else
+        {
+            isGrounded = true;
+            animator.SetBool("isJumping", !isGrounded);
+        }
     }
+
+
+
+
+
+    void Die()
+    {
+        StartCoroutine(Respawn(0.25f));
+    }
+
+    IEnumerator Respawn(float duration)
+    {
+        rb.linearVelocity = new Vector2(0, 0);
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(duration);
+        transform.position = startPos;
+        spriteRenderer.enabled = true;
+
+    }
+
+
+
 }
