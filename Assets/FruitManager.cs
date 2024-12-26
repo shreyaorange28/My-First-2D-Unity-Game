@@ -17,6 +17,6 @@ public class FruitManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fruitText.text = "Fruit Count: " + fruitCount.ToString();
+        fruitText.text = fruitCount.ToString() + "/3";
     }
 }
