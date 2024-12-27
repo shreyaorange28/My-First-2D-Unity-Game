@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public static SceneController instance;
+    public static SceneController instance; 
 
     private void Awake()
     {
@@ -20,8 +20,8 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void LoadScene(string sceneName)
+    public void LoadScene(int sceneIndex)
     {
-        SceneManager.LoadSceneAsync(sceneName);
+        SceneManager.LoadSceneAsync(sceneIndex);
     }
 }
