@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
 
+    public int test;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,10 +65,16 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("obstacle"))
         {
             Die();
-        } if (collision.CompareTag("fruit"))
+        } else if (collision.CompareTag("fruit"))
         {
             Destroy(collision.gameObject);
             fm.fruitCount++;
+        } else if (collision.CompareTag("Finish"))
+        {
+            test++;
+            SceneController.instance.NextLevel();
+            
+
         }
         else
         {
